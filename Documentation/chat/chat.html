@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/alertify.core.css" rel="stylesheet">
+    <link href="css/alertify.default.css" rel="stylesheet">    
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+        <link type="text/css" rel="stylesheet" href="style.css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="js/ajaxupload.js"></script>
+    <script src="js/alertify.min.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />    
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Chat Box</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              Logged in as <a href="#" class="navbar-link"></a>
+            </p>
+            <ul class="nav">
+                                        <li class="active"><a href="#">Welcome to Chat Box</a></li>
+                          <li><a></a></li>
+                          <li><a href="#newuser" data-toggle="modal" role="btn"b>Add new Friend</a></li>
+                          <li><a href="javascript:button1()">Create a Group</a></li>
+                          <li><a href="javascript:button1()">Remove a Friend</a></li>
+                          <li><a class="pull-right" id="logout">Log Out</a></li>
+
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <div id="image_abhi">
+            <img src="img/abhiram.jpg"></img></div></div>
+          <ul class="nav nav-pills nav-stacked">
+          <li><a href="#changepic" data-toggle="modal" data-target="#changepic">Change pic</a> </li>
+        </ul>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span8">
+        <div id="friends_list">
+  <section class="tasks">
+    <header class="tasks-header">
+      <h2 class="tasks-title">Friend List</h2>
+      <a href="index.html" class="tasks-lists">Friend List</a>
+    </header>
+    <fieldset class="tasks-list">
+      <label class="tasks-list-item">
+        <input type="checkbox" name="task_1" value="1" class="tasks-list-cb">
+        <span class="tasks-list-mark"></span>
+        <span class="tasks-list-desc">Sneha</span>
+      </label>
+      <label class="tasks-list-item">
+        <input type="checkbox" name="task_2" value="1" class="tasks-list-cb">
+        <span class="tasks-list-mark"></span>
+        <span class="tasks-list-desc">Susmitha</span>
+      </label>
+      <label class="tasks-list-item">
+        <input type="checkbox" name="task_3" value="1" class="tasks-list-cb">
+        <span class="tasks-list-mark"></span>
+        <span class="tasks-list-desc">Harsha</span>
+      </label>
+    </fieldset>
+  </section>
+  </div>
+         <div id="map"></div>
+         <script type="text/javascript">
+  
+</script> 
+          </div><!--/row-->
+        </div><!--/span-->
+      </div><!--/row-->
+
+
+<div id="messages"><p>Sneha: Hi How are you</p>
+<nr><div id="my_reply"><p>mrabhiram: Hi I am good. How are you</p></div>
+<br><br><p>Sneha: I am fantastic!</p>
+</div><!-- Messages -->
+  <div id="input">
+    <div id="feedback"></div>
+      <form action="#" method="post" id="form_input">
+        <br /><lable>Enter Message:<br /><textarea id="message" cols="25" rows="4"></textarea></lable><br />
+        <input type="submit" name="send" id="send" value="Send Message"/>
+      </form>
+    </div><!-- Input -->
+      <script type="text/javascript" src="js/auto_chat.js"></script>
+      <script type="text/javascript" src="js/send.js"></script>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>
