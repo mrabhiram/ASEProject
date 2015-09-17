@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <style>
+    </style>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+<link href='css/style.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <h1>Register</h1>
+        </div>
+    </div>
+  <form class="sign-up" method="post" action="login.html">
+    <h1 class="sign-up-title">Register</h1>
+   Username <input type="text" class="sign-up-input" placeholder="username" autofocus id="username">
+   Password <input type="password" class="sign-up-input" placeholder="********" id="password">
+   Re-Enter Password <input type="password" class="sign-up-input" placeholder="********">
+   Student id <input type="text" class="sign-up-input" placeholder="16208511" autofocus id="studentid">
+   Phone <input type="text" class="sign-up-input" placeholder="816-772-8658" autofocus id="phone">
+   Email<input type="text" class="sign-up-input" placeholder="asdaf@aasf.edu" autofocus id="email">
+    <input type="submit" value="Register" id="register" class="sign-up-button">
+    <input type ="submit" class="sign-up-button"onclick="location.href='login.html'" name="login" value="Login" id="login">
+  </form>
+            
+
+  
+      <!-- /container -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+    </script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="jquery.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</body>
+<script type="text/javascript">
+    $( "#register" ).click(function() {
+    var UserName = document.getElementById('username').value;
+    var email = document.getElementById('email').value;
+    var studentid = document.getElementById('studentid').value;
+    var password = document.getElementById('password').value;
+    var phone = document.getElementById('phone').value;
+    localStorage.setItem('UserName', UserName);
+    localStorage.setItem('email', email);
+    localStorage.setItem('studentid', studentid);
+    localStorage.setItem('password', password);
+    localStorage.setItem('phone', phone);
+    var retrievedObject = localStorage.getItem('UserName');
+    console.log(retrievedObject);
+    alert( "Registered Successfully" );
+});
+  
+
+</script>>
+
+
+
+
+</html>
