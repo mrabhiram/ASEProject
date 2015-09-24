@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="" data-ng-app="QRCode">
+<head>
+  <meta t="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angular Demo</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript"></script>
+  <link rel="stylesheet" href="css/main.css">  
+</head>
+
+<body style="background-color:lightyellow">
+
+
+<div class="wrapp" ng-controller="qrcode">
+  <div id="username">Welcome </div>
+<p> Enter pin code to store in the QR Code</p>
+<button id="btn" ng-click="storeinQR()">Store in QR</button>
+
+<input type="text" id="pin">
+<div id="pincode"></div>>
+<img src="" id="qrimg">
+<button id="btn" ng-click="getdetails()">Get details</button>
+  <div id="country">Country </div>
+  <div id="place">Place </div>
+  <div id="state">State </div>
+  <div id="lat">Latitude </div>
+  <div id="lng">Longitude </div>
+
+</div>
+
+
+</body>
+
+</html>
+
+
+<script>
+// https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=Hello%20world
+
+angular.module('QRCode', [])
+.controller('qrcode', function ($scope, $http) {
+
+        document.getElementById('username').innerHTML += localStorage.getItem('UserName');  
+     // $scope.initialize = function () {
+     //    $scope.username = localStorage.getItem('UserName'); 
+     //    console.log($scope.username);
+     //    document.getElementById('username').innerHTML = "Hi";
+     // };
+ 
+$scope.storeinQR = function() {
+ document.getElementById("qrimg").src = "https://api.qrserver.com/v1/create-qr-code/?data="+document.getElementById("pin").value +"&amp;size=100x100" ; 
+}
+
+$scope.getdetails = function () {
+/*$http.get('http://api.qrserver.com/v1/read-qr-code/?fileurl='+document.getElementById("qrimg").src).success(function(data) {
+     */  //   console.log(data[0].symbol[0].data);
+         // document.getElementById("country").innerHTML = data[0].symbol[0].data;
+
+         $http.get('http://api.zippopotam.us/us/'+document.getElementById("pin").value).success(function(data) {
+            console.log(data.places[0].state);
+            document.getElementById("country").innerHTML = data.country;
+            document.getElementById("place").innerHTML = data.places[0]['place name'];
+            document.getElementById("state").innerHTML = data.places[0].state;
+            document.getElementById("lat").innerHTML = data.places[0].latitude;
+            document.getElementById("lng").innerHTML = data.places[0].longitude;
+         })                     
+//})
+};
+
+
+
+});
+
+                
+
+</script>
