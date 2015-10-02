@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="" data-ng-app="QRCode">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript"></script>
+<script src="js/app_script.js"></script>
+
+</head>
+<body>
+  
+
+    <div class="views" ng-controller="qrcode">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <!-- We have home navbar without left link-->
+            <div class="center sliding"></div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+              <div class="content-block-title">Welcome To Student id<div id="username"></div>></div>
+              <div class="content-block">
+                <div class="content-block-inner">
+                    <p><input type="text" id="pin"></p>
+                    <p></p><div id="pincode"></div></p>
+                    <p>  <a href="#" id="btn" ng-click="storeinQR()" class="button button-round">Store</a></p>
+                    <img src="" id="qrimg">
+                </div>
+              </div>
+
+                <p>  <a href="#" ng-click="viewQR()" class="button button-round">View my ID</a></p>
+                  <p><a href="#" class="button button-round active">Verify ID</a></p>
+            </div>
+          </div>
+        </div>
+
+
+</body>
+
+<script>
+// https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=Hello%20world
+
+                
+
+</script>
+
+</html>
