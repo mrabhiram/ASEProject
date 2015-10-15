@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+      
+  </head>
+  <body ng-app="starter" class="platform-android platform-cordova platform-webview">
+ 
+    
+      <div ng-controller="login">
+       
+
+
+<div data-page="login-screen" class="page no-navbar no-toolbar no-swipeback">
+  <div class="page-content login-screen-content">
+    <div class="login-screen-title">UMKC Student ID</div>
+    <div class="login-screen-title">Student Login</div>
+    <form>
+      <div class="list-block">
+        <ul>
+          <li class="item-content">
+          <div class="item-media"><i class="icon icon-form-name"></i></div>
+            <div class="item-inner">
+              <div class="item-title label">Username</div>
+              <div class="item-input">
+                <input type="text" name="username" id="username2" placeholder="Your username"/>
+              </div>
+            </div>
+          </li>
+          <li class="item-content">
+            <div class="item-media"><i class="icon icon-form-password"></i></div>
+            <div class="item-inner">
+              <div class="item-title label">Password</div>
+              <div class="item-input">
+                <input type="password" name="password" id="password2" placeholder="Your password"/>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="list-block">
+        <ul>
+          <li>
+          <button  class="item-link list-button" ng-click="login()">Login</button>
+          <a href="admin_login.html">Admin</a>
+          </li>
+        </ul>
+        <div class="list-block-label">
+          <p>Click Log In to enter app</p>
+        </div>
+      </div>
+    </form>
+  </div>
+ </div>
+
+
+  </body>
+</html>
